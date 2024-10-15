@@ -2,8 +2,9 @@ Extension { #name : 'BlOSWindowEventHandler' }
 
 { #category : '*BlocIM' }
 BlOSWindowEventHandler >> visitTextEditingEvent: anEvent [
+
 	| blEvent |
-	blEvent := BlTextInputEvent new
+	blEvent := BlTextEditingEvent new
 		           text: anEvent text;
 		           modifiers: (self convertKeyModifiers: anEvent modifiers);
 		           yourself.
