@@ -1,15 +1,6 @@
 Extension { #name : 'AeFontManager' }
 
 { #category : '*BlocIM' }
-AeFontManager >> defaultEmojiFace [
-
-	faceEntriesByFamilyName keysAndValuesDo: [ :name :fonts |
-		(name includesSubstring: 'emoji') ifTrue: [
-			^ fonts anyOne newFaceWith: freetypeLibrary ] ].
-	^ nil
-]
-
-{ #category : '*BlocIM' }
 AeFontManager >> defaultJapaneseFace [
 
 	#( 'meiryo' 'ms pgothic' 'hiragino sans gb' ) do: [ :name |
